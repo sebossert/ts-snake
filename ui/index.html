@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+    <div>
+        <div>
+            <input name="player-name" value="player">
+            <label for="player-name">Player Name</label>
+        </div>
+        <div>
+            <input name="points" id="points" readonly value="0">
+            <label for="points">Points</label>
+        </div>
+        <div>
+            <ol id="highscore">
+            </ol>
+        </div>
+        <div id="simple-form">
+
+        </div>
+    </div>
+</body>
+<script src='../js/config.js'></script>
+<script src='../js/apple.js'></script>
+<script src='../js/player.js'></script>
+<script src='../js/input.js'></script>
+<script src='../js/grid.js'></script>
+<script src='../js/highscore.js'></script>
+<script src='../js/snake.js'></script>
+<script src='../js/simple-form.js'></script>
+<script src='../js/game.js'></script>
+<script>
+    function initialize() {
+        game.initialize(document.getElementById('game-canvas'));
+        player.name = queryPlayerName();
+    }
+    function queryPlayerName() {
+        return document.getElementsByName('player-name')[0].value;
+    }
+    window.onload = function () {
+        initialize();
+        simpleForm("Config", config);
+    }
+</script>
+
+</html>
