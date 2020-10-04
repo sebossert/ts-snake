@@ -2,7 +2,7 @@ var player = {
   name: "Player",
   points: 0,
   reset: function() {
-    this.name = document.getElementsByName("player-name")[0].value;
+    this.name = uiElements.playerNameElement.value;
     this.points = 0;
   },
 };

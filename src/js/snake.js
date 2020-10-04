@@ -1,6 +1,6 @@
 var snake = {
-  xPosition: 0,
-  yPosition: 0,
+  xPosition: config.snakeStartX,
+  yPosition: config.snakeStartY,
   xVelocity: 0,
   yVelocity: 0,
   size: 5,

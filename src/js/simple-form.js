@@ -37,6 +37,9 @@ var simpleForm = {
     return label;
   },
   createInput: function(prop, obj) {
+    if(typeof obj[prop] === 'object') {
+        return this.create(prop, obj[prop]);
+    }
     let input = document.createElement("input");
     input.name = prop;
     input.value = obj[prop];

@@ -15,6 +15,7 @@ var game = {
     input.reset();
     this.canvas.width = config.tileCount * config.gridSize;
     this.canvas.height = config.tileCount * config.gridSize;
+    clearInterval(this.interval);
     this.interval = setInterval(this.turn.bind(this), 1000 / config.fps);
   },
   turn: function() {

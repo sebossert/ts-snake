@@ -12,8 +12,8 @@ var grid = {
     this.canvasContext.fillRect(
       x * config.gridSize,
       y * config.gridSize,
-      config.gridSize - 2,
-      config.gridSize - 2
+      config.gridSize - config.gridDistance,
+      config.gridSize - config.gridDistance
     );
   },
 };
