@@ -6,6 +6,7 @@
 #simple-form fieldset {
     width: auto;
     display: inline-block;
+    border: 0.15em dashed lime;
 }
 #simple-form legend {
     width: auto;
