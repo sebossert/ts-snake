@@ -42,7 +42,7 @@ export class Snake extends Movable {
   wrapAround() {
     if (this.position.x < 0) {
       this.position.x = this.config.gridDimension.x - 1;
-    } else if (this.position.x > this.config.gridDimension.y - 1) {
+    } else if (this.position.x > this.config.gridDimension.x - 1) {
       this.position.x = 0;
     } else if (this.position.y < 0) {
       this.position.y = this.config.gridDimension.y - 1;

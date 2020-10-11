@@ -56,6 +56,7 @@ export class Game {
     this.initPlayer();
     this.initSnake();
     this.initApple();
+    this.renderer.reset();
   }
   initPlayer() {
     const newPlayerElement = <HTMLInputElement>(
@@ -97,7 +98,7 @@ export class Game {
     }
   }
   render() {
-    this.renderer.reset();
+    this.renderer.clear();
     for (let i = 0; i < this.objects.length; i++) {
       this.objects[i].render(this.renderer);
     }

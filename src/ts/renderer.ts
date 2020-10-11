@@ -11,10 +11,21 @@ export class Renderer {
     this.config = config;
   }
   reset() {
+    this.canvas.width =
+      (this.config.gridDimension.x ) *
+      (this.config.tileSize);
+    this.canvas.height =
+      (this.config.gridDimension.y ) *
+      (this.config.tileSize);
+  }
+  clear() {
     this.canvasContext.fillStyle = "black";
     this.canvasContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
-  drawSquare(fillStyle: string | CanvasGradient | CanvasPattern, position: Vector) {
+  drawSquare(
+    fillStyle: string | CanvasGradient | CanvasPattern,
+    position: Vector
+  ) {
     this.canvasContext.fillStyle = fillStyle;
     this.canvasContext.fillRect(
       position.x * this.config.tileSize,

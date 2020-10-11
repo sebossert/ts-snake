@@ -3,7 +3,7 @@ import { Vector } from "./vector";
 export class Config {
   tileSize: number = 20;
   tileDistance: number = 2;
-  gridDimension: Vector = { x: 20, y: 20 };
+  gridDimension: Vector = { x: 30, y: 20 };
   startingTailSize: number = 5;
   snakeStart: Vector = { x: 10, y: 10 };
   appleStart: Vector = { x: 9, y: 9 };
