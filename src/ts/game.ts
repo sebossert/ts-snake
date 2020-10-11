@@ -76,9 +76,10 @@ export class Game {
   }
   initApple() {
     this.apple = new Apple(
-      this.config,
-      this.snake,
-      this.player.points.add.bind(this.player.points)
+      this.player.points.add.bind(this.player.points),
+      this.snake.checkCollision.bind(this.snake),
+      this.snake.grow.bind(this.snake),
+      this.config
     );
     this.objects.push(this.apple);
   }

@@ -3,14 +3,12 @@ import { Renderer } from "./renderer";
 
 export class GameObject {
   position: Vector = { x: -1, y: -1 };
-  size: Vector;
+  color: string = "pink";
   update() {}
   render(renderer: Renderer) {
-    renderer.drawSquare("pink", this.size);
+    renderer.drawSquare(this.color, this.position);
   }
   checkCollision(position: Vector): boolean {
-    return (
-      this.position.x == position.x && this.position.y == position.y
-    );
+    return this.position.x == position.x && this.position.y == position.y;
   }
 }

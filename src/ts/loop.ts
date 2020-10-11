@@ -10,16 +10,19 @@ export class Loop {
   update: () => void;
   render: () => void;
   running: boolean = false;
-  constructor(update: () => void, render: () => void, window: Window, config?: Config) {
+  config: Config;
+  constructor(
+    update: () => void,
+    render: () => void,
+    window: Window,
+    config: Config = new Config()
+  ) {
     this.update = update;
     this.render = render;
     this.window = window;
-    if(config){
-      this.updatesDelta = 1000.0 / config.ups;
-      this.framesDelta = 1000.0 / config.fps;
-      console.log("Set UPS to " + config.ups);
-      console.log("Set FPS to " + config.fps);
-    }
+    this.config = config;
+    console.log("Set UPS to " + config.ups);
+    console.log("Set FPS to " + config.fps);
   }
   run(time: number) {
     let dtFps: number = time - this.previousFrameUpdate;
@@ -45,6 +48,8 @@ export class Loop {
   }
 
   launch() {
+    this.updatesDelta = 1000.0 / Number.parseInt(this.config.ups);
+    this.framesDelta = 1000.0 / Number.parseInt(this.config.fps);
     this.running = true;
     this.window.requestAnimationFrame((time) => {
       this.previousGameUpdate = this.previousFrameUpdate = time;

@@ -12,11 +12,11 @@ export class Renderer {
   }
   reset() {
     this.canvas.width =
-      (this.config.gridDimension.x ) *
-      (this.config.tileSize);
+      Number.parseInt(this.config.gridDimension.x) *
+      Number.parseInt(this.config.tileSize);
     this.canvas.height =
-      (this.config.gridDimension.y ) *
-      (this.config.tileSize);
+      Number.parseInt(this.config.gridDimension.y) *
+      Number.parseInt(this.config.tileSize);
   }
   clear() {
     this.canvasContext.fillStyle = "black";
@@ -28,10 +28,12 @@ export class Renderer {
   ) {
     this.canvasContext.fillStyle = fillStyle;
     this.canvasContext.fillRect(
-      position.x * this.config.tileSize,
-      position.y * this.config.tileSize,
-      this.config.tileSize - this.config.tileDistance,
-      this.config.tileSize - this.config.tileDistance
+      position.x * Number.parseInt(this.config.tileSize),
+      position.y * Number.parseInt(this.config.tileSize),
+      Number.parseInt(this.config.tileSize) -
+        Number.parseInt(this.config.tileDistance),
+      Number.parseInt(this.config.tileSize) -
+        Number.parseInt(this.config.tileDistance)
     );
   }
 }

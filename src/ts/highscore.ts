@@ -1,16 +1,9 @@
 import { Player } from "./player";
 
-/**
- * @class High
- */
 export class Highscore {
   entries: Array<{ name: string; points: number }> = [];
   element: HTMLOListElement;
   numberOfEntries: number = 10;
-  /**
-   *
-   * @param element
-   */
   constructor(element: HTMLOListElement) {
     this.element = element;
     this.load();

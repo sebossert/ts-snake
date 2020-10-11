@@ -6,7 +6,7 @@ export class InputHandler {
   movable: Movable;
   mapping: Record<string, Vector>;
   config: Config;
-  constructor(document: Document, config: Config) {
+  constructor(document: Document, config: Config = new Config()) {
     this.mapping = {
       ArrowLeft: { x: -1, y: 0 },
       ArrowRight: { x: 1, y: 0 },
