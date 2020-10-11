@@ -5,57 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/simple-form.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/simple-form.css">
 </head>
 
 <body>
-    <button class="reset" onclick="javascript:reset();">reset</button>
-    <canvas id="game-canvas" width="400" height="400"></canvas>
-    <div>
-        <div>
-            <input name="player-name" value="player">
-            <label for="player-name">Player Name</label>
+    <div class="container">
+        <div id="game">
+            <h1>SNAKE</h1>
+            <canvas id="game-canvas" width="400" height="400"></canvas>
         </div>
-        <div>
-            <input name="points" id="points" readonly value="0">
-            <label for="points">Points</label>
+        <div id="misc">
+            <div id="player">
+                <span id="player-name">Player 1</span>
+                <span> : </span>
+                <span id="points"></span>
+            </div>
+            <div id="new-game">
+                <input id="new-player-name" name="player-name" value="player">
+                <label for="player-name">Player Name</label>
+                <button id="restart-button">NEW GAME</button>
+            </div>
+            <div id="highscore">
+                <h3>HIGHSCORE</h3>
+                <ol id="highscore-list">
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                    <li>EMPTY</li>
+                </ol>
+            </div>
+            <div id="simple-form">
+            </div>
         </div>
-        <div>
-            <ol id="highscore">
-            </ol>
-        </div>
-        <div id="simple-form"></div>
     </div>
 </body>
-<script src='js/ui-elements.js'></script>
-<script src='js/config.js'></script>
-<script src='js/apple.js'></script>
-<script src='js/player.js'></script>
-<script src='js/input.js'></script>
-<script src='js/grid.js'></script>
-<script src='js/highscore.js'></script>
-<script src='js/snake.js'></script>
-<script src='js/simple-form.js'></script>
-<script src='js/game.js'></script>
+<script data-main="js/main.js" src='js/require.js'></script>
 <script>
-    function reset() {
-        game.reset();
-    }
-    function initialize() {
-        game.initialize(document.getElementById('game-canvas'));
-        initializeConfig();
-    }
-    function initializeConfig(){
-        let container = document.getElementById('simple-form');
-        container.appendChild(simpleForm.create('Config', config));
-    }
-    function queryPlayerName() {
-        return document.getElementsByName('player-name')[0].value;
-    }
-    window.onload = function () {
-        initialize();
-    }
 </script>
 
 </html>

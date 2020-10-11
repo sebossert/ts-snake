@@ -1,9 +1,67 @@
-.reset {
-    display: block;
-    border: none;
+html {
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
+    color: lime;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+div {
+    margin: 0px;
+    padding: 0px;
+}
+#game {
+    display: inline-block;
+    width: auto;
+}
+#misc {
+    display: inline-block;
+    width: auto;
+}
+#misc > div {
+    padding: 0.3em;
+    border: 0.4em solid lime;
+    margin: 0.3em;
+}
+canvas {
+    margin: 0.6em;
+    border: 0.8em solid lime;
+    padding: 0.6em;
+}
+#new-game button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 14pt;
     color: lime;
+    padding: 1em;
+    display: block;
+    border: none;
+    background-color: black;
+    border: 0.3em solid lime;
+    margin: 0.3em;
+    padding: 0.3em;
+}
+h1 {
+    text-align: center;
+}
+#new-game input {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14pt;
+    color: rgba(0, 255, 0, 0.5);
+    background-color: black;
+    border: 0.3em solid lime;
+    margin: 0.3em;
+    padding: 0.3em;
+}
+#points {
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block;
+}
+#highscore {
+    list-style: upper-roman;
 }

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "AMD",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "outDir": "build/js",
+        "sourceMap": true,
+        "moduleResolution": "classic",
+        "lib": [ "es2015", "dom",  "es2017" ]
+    },
+    "include": [
+        "src/ts/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
