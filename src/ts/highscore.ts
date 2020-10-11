@@ -29,7 +29,7 @@ export class Highscore {
         break;
       }
     }
-    if (this.entries.length < this.element.childNodes.length && !added) {
+    if (this.entries.length < this.numberOfEntries && !added) {
       console.log("player bad");
       this.entries.push({
         name: player.name,
@@ -48,7 +48,7 @@ export class Highscore {
     }
   }
   update(updateEntries: boolean = true) {
-    for (let i = 0; i < this.entries.length; i++) {
+    for (let i = 0; i < this.numberOfEntries; i++) {
       if (updateEntries) {
         localStorage.setItem("entry-" + i, JSON.stringify(this.entries[i]));
       }
