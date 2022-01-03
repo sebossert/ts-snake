@@ -3,6 +3,12 @@ snake
 
 for demonstrational and educational purposes
 
+## TODO
+
+- create external lib
+- improve module handling (move away from es5, requirejs)
+- add further tests (canvas?)
+
 ## run
 
 ### local
