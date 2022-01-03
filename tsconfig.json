@@ -4,7 +4,7 @@
         "module": "AMD",
         "noImplicitAny": true,
         "removeComments": true,
-        "outDir": "build/js",
+        "outDir": "build/public/js",
         "sourceMap": true,
         "moduleResolution": "node",
         "lib": [ "es2015", "dom",  "es2017" ]
