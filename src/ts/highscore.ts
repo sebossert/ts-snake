@@ -7,7 +7,7 @@ export class Highscore {
   constructor(element: HTMLOListElement) {
     this.element = element;
     this.load();
-    this.update(false);
+    //this.update(false);
   }
   add(player: Player) {
     let added = false;
@@ -41,7 +41,7 @@ export class Highscore {
     }
   }
   update(updateEntries: boolean = true) {
-    for (let i = 0; i < this.numberOfEntries; i++) {
+    for (let i = 0; i < this.numberOfEntries && this.entries[i]; i++) {
       if (updateEntries) {
         localStorage.setItem("entry-" + i, JSON.stringify(this.entries[i]));
       }

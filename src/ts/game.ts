@@ -89,6 +89,7 @@ export class Game {
     this.loop.launch();
   }
   gameOver() {
+    console.dir(this);
     this.highscore.add(this.player);
     this.running = false;
     this.loop.stop();
