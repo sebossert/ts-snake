@@ -6,20 +6,21 @@
   "scripts": {
     "check-types": "tsc",
     "build": "npm run check-types && npm run copy-static",
-    "copy-static": "copy \".\\src\\css\\\" \"build\\css\\\" && copy \".\\src\\index.html\" \"build\\\""
+    "copy-static": "cp -r src/css/ build/ && cp -r src/index.html build/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sbossert/js-snake.git"
+    "url": "git+https://github.com/sebossert/js-snake.git"
   },
   "author": "sebastian bossert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sbossert/js-snake/issues"
+    "url": "https://github.com/sebossert/js-snake/issues"
   },
-  "homepage": "https://github.com/sbossert/js-snake#readme",
+  "homepage": "https://github.com/sebossert/js-snake#readme",
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
+    "@babel/cli": "^7.16.7",
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
