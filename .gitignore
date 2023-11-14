@@ -105,6 +105,3 @@ dist
 
 # Project output
 build
-
-# Directory created for github pages during npm run github-pages
-github-pages

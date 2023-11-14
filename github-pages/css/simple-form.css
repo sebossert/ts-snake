@@ -1,0 +1,31 @@
+#simple-form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    width: 35em;
+}
+#simple-form fieldset {
+    width: auto;
+    display: inline-block;
+    border: 0.15em dashed lime;
+}
+#simple-form legend {
+    width: auto;
+    display: inline-block;
+}
+#simple-form form {
+    width: auto;
+    display: inline-block;
+}
+#simple-form div {
+    padding: 1em;
+    width: auto;
+    display: inline-block;
+}
+#simple-form input {
+    min-width: 5em;
+    display: inline-block;
+}
+#simple-form label {
+    width: 20em;
+    display: inline-block;
+}
