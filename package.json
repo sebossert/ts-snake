@@ -9,6 +9,7 @@
     "copy-server": "cp src/app.js build/",
     "test": "jest",
     "serve": "node build/app.js",
+    "github-pages": "npm run build && cp -r build/public/* github-pages",
     "build-n-serve": "npm run build && npm run serve"
   },
   "repository": {
